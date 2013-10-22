@@ -85,4 +85,6 @@ RT as the default.
 
 =head1 SEE ALSO
 
-L<Pod::Weaver::Section::Bugs>
+L<Pod::Weaver::Section::Bugs> which requires us setting C<bugtracker> metadata.
+
+L<Pod::Weaver::Section::BugsRT> which always uses RT.
