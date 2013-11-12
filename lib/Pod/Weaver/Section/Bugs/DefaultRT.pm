@@ -2,7 +2,7 @@ package Pod::Weaver::Section::Bugs::DefaultRT;
 
 use 5.010001;
 use Moose;
-use Text::Wrap ();
+#use Text::Wrap ();
 with 'Pod::Weaver::Role::Section';
 
 #use Log::Any '$log';
@@ -34,7 +34,9 @@ sub weave_section {
     $text .= "by email to L<mailto:$mailto>\.\n";
   }
 
-  $text = Text::Wrap::wrap(q{}, q{}, $text);
+  # disabled temporarily, Text::Wrap wraps "L<blah" + ">". a better wrapping
+  # module is needed.
+  # $text = Text::Wrap::wrap(q{}, q{}, $text);
 
   $text .= <<'HERE';
 
