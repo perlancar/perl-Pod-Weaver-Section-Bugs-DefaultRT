@@ -1,5 +1,10 @@
 Revision history for Pod-Weaver-Section-Bugs-DefaultRT
 
+0.03    2013-11-12 (SHARYANTO)
+
+        - Disable Text::Wrap because it wraps 'L<foo' + '>'.
+
+
 0.02    2013-11-08 (SHARYANTO)
 
         - Linkify URLs.
