@@ -1,5 +1,8 @@
 package Pod::Weaver::Section::Bugs::DefaultRT;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use Moose;
 #use Text::Wrap ();
@@ -7,9 +10,8 @@ with 'Pod::Weaver::Role::Section';
 
 #use Log::Any '$log';
 
+use List::Util qw(first);
 use Moose::Autobox;
-
-# VERSION
 
 sub weave_section {
   my ($self, $document, $input) = @_;
@@ -44,6 +46,17 @@ When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
 HERE
+
+  # skip if document already have the section
+  my $sect = first {
+      $_->can('command') && $_->command eq 'head1' &&
+          uc($_->{content}) eq uc('BUGS') }
+      @{ $document->children }, @{ $input->{pod_document}->children };
+
+  #if ($sect) {
+  #    #$self->log();
+  #    return;
+  #}
 
   $document->children->push(
     Pod::Elemental::Element::Nested->new({
