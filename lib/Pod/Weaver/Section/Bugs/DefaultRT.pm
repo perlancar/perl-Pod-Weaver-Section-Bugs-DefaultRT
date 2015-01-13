@@ -47,26 +47,8 @@ patch to an existing test-file that illustrates the bug or desired
 feature.
 HERE
 
-  # skip if document already have the section
-  my $sect = first {
-      $_->can('command') && $_->command eq 'head1' &&
-          uc($_->{content}) eq uc('BUGS') }
-      @{ $document->children }, @{ $input->{pod_document}->children };
-
-  #if ($sect) {
-  #    #$self->log();
-  #    return;
-  #}
-
-  $document->children->push(
-    Pod::Elemental::Element::Nested->new({
-      command  => 'head1',
-      content  => 'BUGS',
-      children => [
-        Pod::Elemental::Element::Pod5::Ordinary->new({ content => $text }),
-      ],
-    }),
-  );
+  $self->add_text_to_section($document, $text, 'BUGS',
+                             {ignore=>1});
 }
 
 no Moose;
