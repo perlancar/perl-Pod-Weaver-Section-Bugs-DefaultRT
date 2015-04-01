@@ -9,10 +9,6 @@ use Moose;
 with 'Pod::Weaver::Role::Section';
 with 'Pod::Weaver::Role::AddTextToSection';
 
-#use Log::Any '$log';
-
-use List::Util qw(first);
-
 sub weave_section {
   my ($self, $document, $input) = @_;
 
