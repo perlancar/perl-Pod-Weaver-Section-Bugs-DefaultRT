@@ -7,6 +7,7 @@ use 5.010001;
 use Moose;
 #use Text::Wrap ();
 with 'Pod::Weaver::Role::Section';
+with 'Pod::Weaver::Role::AddTextToSection';
 
 #use Log::Any '$log';
 
