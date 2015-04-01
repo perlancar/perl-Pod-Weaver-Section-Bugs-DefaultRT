@@ -1,5 +1,12 @@
 Revision history for Pod-Weaver-Section-Bugs-DefaultRT
 
+0.04    2015-04-01 (PERLANCAR)
+
+	- No functional changes.
+
+	- Remove Moose::Autobox.
+
+
 0.03    2013-11-12 (SHARYANTO)
 
         - Disable Text::Wrap because it wraps 'L<foo' + '>'.
