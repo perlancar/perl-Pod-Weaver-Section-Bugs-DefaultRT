@@ -43,6 +43,8 @@ patch to an existing test-file that illustrates the bug or desired
 feature.
 HERE
 
+  $text .= "\n\n";
+
   $self->add_text_to_section($document, $text, 'BUGS',
                              {ignore=>1});
 }
