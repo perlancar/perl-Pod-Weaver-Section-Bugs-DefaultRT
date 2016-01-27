@@ -13,10 +13,14 @@ sub weave_section {
   my ($self, $document, $input) = @_;
 
   my ($web,$mailto);
-  if ($input->{distmeta}{resources}{bugtracker}) {
-      my $bugtracker = $input->{distmeta}{resources}{bugtracker};
-      ($web,$mailto) = @{$bugtracker}{qw/web mailto/};
+  for my $meta_key (qw(distmeta meta)){
+      if ($input->{$meta_key}{resources}{bugtracker}) {
+          my $bugtracker = $input->{$meta_key}{resources}{bugtracker};
+          ($web,$mailto) = @{$bugtracker}{qw/web mailto/};
+          last;
+      }
   }
+
   if (!$web && !$mailto) {
       my $name = $input->{zilla}->name;
       $web = "http://rt.cpan.org/Public/Dist/Display.html?Name=$name";
