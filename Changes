@@ -1,5 +1,13 @@
 Revision history for Pod-Weaver-Section-Bugs-DefaultRT
 
+0.06    2016-10-07 (PERLANCAR)
+
+        - Look in $input->{meta} for the bugtracker if none found in
+          $input->{distmeta}. This allows the plugin to work with standalone
+          podweaver where the bug tracker is specified in the META.json or
+          META.yml file. (Thanks mvgrimes.)
+
+
 0.05    2015-04-02 (PERLANCAR)
 
 	- [Bugfix] After we use DZR:AddTextToSection, we now have to add
