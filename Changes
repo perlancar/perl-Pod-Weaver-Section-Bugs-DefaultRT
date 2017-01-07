@@ -1,5 +1,3 @@
-Revision history for Pod-Weaver-Section-Bugs-DefaultRT
-
 0.06    2016-10-07 (PERLANCAR)
 
         - Look in $input->{meta} for the bugtracker if none found in
