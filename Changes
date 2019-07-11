@@ -1,4 +1,4 @@
-0.06    2016-10-07 (PERLANCAR)
+0.06    2016-10-07  Released-By: PERLANCAR
 
         - Look in $input->{meta} for the bugtracker if none found in
           $input->{distmeta}. This allows the plugin to work with standalone
@@ -6,29 +6,29 @@
           META.yml file. (Thanks mvgrimes.)
 
 
-0.05    2015-04-02 (PERLANCAR)
+0.05    2015-04-02  Released-By: PERLANCAR
 
 	- [Bugfix] After we use DZR:AddTextToSection, we now have to add
 	  blank line ourselves.
 
 
-0.04    2015-04-01 (PERLANCAR)
+0.04    2015-04-01  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Remove Moose::Autobox.
 
 
-0.03    2013-11-12 (SHARYANTO)
+0.03    2013-11-12  Released-By: SHARYANTO
 
         - Disable Text::Wrap because it wraps 'L<foo' + '>'.
 
 
-0.02    2013-11-08 (SHARYANTO)
+0.02    2013-11-08  Released-By: SHARYANTO
 
         - Linkify URLs.
 
 
-0.01    2013-10-22 (SHARYANTO)
+0.01    2013-10-22  Released-By: SHARYANTO
 
         - First release.
